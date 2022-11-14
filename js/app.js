@@ -50,13 +50,17 @@ sameTwo.forEach(checkTwo =>{
 })
 
    totalBill.addEventListener("keypress" , ()=>{
-      // sameTwo.forEach(inputTaken =>{
-      //   inputTaken.value = ""
-      // })
+     
+   
+   
 
    custom.value = ""
      
    })
+
+   numberOfPeople.addEventListener("keypress" , () =>{
+         custom.value = ""
+   } )
 
 add.style.display = "none"
 
