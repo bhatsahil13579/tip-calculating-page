@@ -21,6 +21,7 @@
         <div class="container first">
           <p>Bill</p>
           <div class="wrapper">
+            
             <input oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
               id="inputFirst" class="sameThree" type="text" placeholder="0.00" >
           </div>
@@ -32,14 +33,17 @@
             <li><button class="btn" value="15">15%</button></li>
             <li><button class="btn" value="25">25% </button></li>
             <li><button class="btn" value="50">50%</button></li>
+           
             <li><input  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"  id="#custom" class="sameThree sameTwo" type="text" placeholder="Custom"></li>
           </ul>
 
           <div class="inputHolder">
           <p>Number of People</p>
            <p class="Add" id="add" > Can,t be zero</p> 
-          <input  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" id="inputPeople" class="people sameThree sameTwo" type="text"
+          
+           <input  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" id="inputPeople" class="people sameThree sameTwo" type="text"
             placeholder="0">
+          
           </div>
         
           </div>

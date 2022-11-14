@@ -1,6 +1,6 @@
 const totalBill = document.querySelector("#inputFirst")
 const button = document.querySelectorAll(".btn")
-const custom = document.getElementById("#custom")
+const custom = document.getElementById("custom")
 const sameThree = document.querySelectorAll(".sameThree")
 const numberOfPeople = document.querySelector("#inputPeople")
 const amount = document.querySelector(".Amount")
@@ -48,7 +48,11 @@ sameTwo.forEach(checkTwo =>{
 
 })
 
-    
+   totalBill.addEventListener("keypress" , ()=>{
+      sameTwo.forEach(inputTaken =>{
+        inputTaken.value = ""
+      })
+   })
 
 add.style.display = "none"
 
@@ -60,10 +64,10 @@ function calculate(event) {
 
 
 function watch() {
-   if (numberOfPeople.value === "0" ||  numberOfPeople.value === "" || custom.value === ""){
+   if (numberOfPeople.value === "0" ||  numberOfPeople.value === "" || custom.value === "" ){
       amount.textContent = "$0.00"
       total.textContent = "$0.00"
-   }
+   } else if (totalBill.value === "" || totalBill.value === "0") {}
   
 
 }
