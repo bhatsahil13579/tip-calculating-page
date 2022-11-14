@@ -9,6 +9,7 @@ const reset = document.querySelector(".button")
 const add = document.getElementById("add")
 const sameTwo = document.querySelectorAll(".sameTwo")
 
+console.log (custom)
 
 button.forEach(element => {
 
@@ -49,9 +50,12 @@ sameTwo.forEach(checkTwo =>{
 })
 
    totalBill.addEventListener("keypress" , ()=>{
-      sameTwo.forEach(inputTaken =>{
-        inputTaken.value = ""
-      })
+      // sameTwo.forEach(inputTaken =>{
+      //   inputTaken.value = ""
+      // })
+
+   custom.value = ""
+     
    })
 
 add.style.display = "none"
