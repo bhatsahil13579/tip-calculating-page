@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@1,700&display=swap');
+
+
+
+
+
+:root {
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: #00494d;
+    --Dark-grayish-cyan: #5e7a7d;
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --font-family: 'Space Mono', monospace;
+}
+
+
+body {
+
+    height: 100vh;
+
+}
+
+main {
+
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: var(--Light-grayish-cyan)
+}
+h1 {
+    font-family: var(--font-family);
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    
+   
+}
+
+
+.main-container{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    
+   
+   
+}
+
+.container {
+    background-color: var(--White);
+    max-width: 420px;
+    width: 47%;
+    height: 27rem;
+   
+}
+
+
+.container > p {
+    margin: 1rem 0 1rem 2rem;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--Grayish-cyan);
+    text-align: start;
+
+}
+
+.inputHolder  .Add {
+    width: 90%;
+    text-align: end ;
+    color: orange;
+   
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper>input {
+    text-align: right;
+    width: 90%;
+    font-family: var(--font-family);
+    color: var(--Very-dark-cyan);
+    padding: 1rem;
+    font-weight: 700;
+    font-size: 28px;
+    border: none;
+    height: 2.8rem;
+    border-radius: 5px;
+    background: url(../images/icon-dollar.svg) no-repeat scroll 7px 12px;
+    background-color: hsl(186, 14%, 43%, 0.08);
+    cursor: pointer;
+}
+
+.wrapper>input:focus {
+    outline: none;
+}
+
+
+.wrapper>input:hover {
+    border: 2px solid var(--Strong-cyan);
+}
+
+.container > ul {
+    width: 100%;
+    display: flex;
+   flex-wrap: wrap;
+   gap: 0.5rem 0.3rem;
+ 
+   
+
+}
+ul{
+   
+    display: flex;
+    text-align: start;
+}
+
+ul li {
+
+ 
+   list-style: none;
+   
+}
+
+ul li button{
+    width: 6rem;
+    height: 2.7rem ;
+    border: none;
+    border-radius: 5PX;
+    color: var(--White);
+    font-family: var(--font-family);
+    font-size: 20PX;
+    background-color: var(--Very-dark-cyan);
+    cursor: pointer;
+}
+ul li button:hover {
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+} 
+
+ul li button:focus{
+    background-color: var(--Strong-cyan);
+}
+
+
+
+ul li input {
+    text-align: center;
+    width: 6rem;
+    height: 2.7rem;
+    margin-left: rem;
+    border: none;
+    font-size: 20PX;
+    font-family: var(--font-family);
+    color: var(--Very-dark-cyan);
+    background-color: hsl(186, 14%, 43%, 0.08) ;
+}
+
+ul li input:focus{
+ outline: none;
+
+}
+
+.inputHolder{
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: column;
+    height: 30%;
+    gap: 1rem;
+    margin-left: 1rem;
+   }
+
+.inputHolder > p{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--Grayish-cyan);
+    text-align: start;
+   
+  
+}
+
+.people{
+    text-align: right;
+    width: 90%;
+    font-family: var(--font-family);
+    color: var(--Very-dark-cyan);
+    padding: 1rem;
+    font-weight: 700;
+    font-size: 28px;
+    border: none;
+    height: 2.8rem;
+    border-radius: 5px;
+    background: url(../images/icon-person.svg) no-repeat scroll 7px 12px;
+    background-color: rgba(94, 122, 125, 0.08);
+    cursor: pointer;
+   
+}
+
+.people:focus {
+    outline: none;
+}
+
+
+.people:hover {
+    border: 2px solid var(--Strong-cyan);
+}
+.first{
+   
+    border-radius: 20px 0 0 20px;
+}
+.last{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 20px 20px 0;
+   
+}
+.same{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    font-size: 14px;
+    color: var(--White);
+}
+.same2{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    font-size: 28px;
+    color: var(--Strong-cyan);
+}
+
+.holder{
+    font-family: var(--font-family);
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    /* row-gap: 0rem; */
+    border-radius: 14px;
+    height: 90%;background-color: var(--Very-dark-cyan) ;
+}
+.tip{
+  text-align: start;
+}
+
+.person{
+    font-size: 15px;
+    color: var(--Dark-grayish-cyan);
+}
+.button{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
+}
+
+.button > button{
+    width: 70%;
+    height: 2.5rem;
+     margin-bottom: 2rem;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--Very-dark-cyan);
+    background-color: var(--Strong-cyan);
+    cursor: pointer;
+}
+
+.button > button:hover{
+   
+    background-color: var(--Light-grayish-cyan);
+}
+
+
+
+
+
+@media (max-width : 724px) {
+
+    
+
+h1 {
+        margin-bottom: 1.5rem;
+    }
+    
+    .container-wrapper {
+        flex-direction: column;
+        height: 85%;
+       
+    }
+
+    .container {
+        width: 95%;
+       
+
+    }
+    .holder {
+        row-gap: 0;
+    }
+
+    .first{
+        border-radius:   20px 20px 0 0 ;
+        }
+    
+        .last{
+            border-radius: 0 0 20px 20px;
+        }
+
+        .inputHolder{
+           margin-bottom: 2rem;
+          
+        }
+
+
+
+        ul li button {
+            width: 5rem;
+        }
+
+        
+
+       
+      
+}
+
+@media (max-width : 375px )  {
+
+   body {
+    height: 110vh;
+   }
+
+
+}
+
+
+
+
+@media (max-width : 724px) and (orientation: landscape) {
+    .container-wrapper {
+        flex-flow: row;
+        width: 97%;
+    }
+
+    .container {
+        height: 97%;
+
+    }
+
+    
+} 

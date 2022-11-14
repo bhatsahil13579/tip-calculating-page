@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <main>
+
+    <div class="main-container">
+
+      <h1>spli<br>tter</h1>
+      <div class="container-wrapper">
+        <div class="container first">
+          <p>Bill</p>
+          <div class="wrapper">
+            <input oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+              id="inputFirst" class="sameThree" type="text" placeholder="0.00" >
+          </div>
+
+          <p>Select Tip %</p>
+          <ul>
+            <li><button class="btn" value="5">5%</button></li>
+            <li><button class="btn" value="10">10%</button></li>
+            <li><button class="btn" value="15">15%</button></li>
+            <li><button class="btn" value="25">25% </button></li>
+            <li><button class="btn" value="50">50%</button></li>
+            <li><input  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"  id="#custom" class="sameThree sameTwo" type="text" placeholder="Custom"></li>
+          </ul>
+
+          <div class="inputHolder">
+          <p>Number of People</p>
+           <p class="Add" id="add" > Can,t be zero</p> 
+          <input  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" id="inputPeople" class="people sameThree sameTwo" type="text"
+            placeholder="0">
+          </div>
+        
+          </div>
+        <div class="container last">
+          <div class="holder">
+            <div class="classA same">
+              <p class="tip">Tip Amount <br> <span class="person">/Person</span> </p>
+              <span class="Amount same2">$0.00</span>
+            </div>
+
+            <div class="classT same">
+              <p class="tip"> Total <br> <span class="person">/Person</span> </p> <span class="total same2">$0.00</span>
+            </div>
+            <div class="button">
+              <button>Reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/js/app.js"></script>
+</body>
+
+</html>
