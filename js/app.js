@@ -1,23 +1,27 @@
-const totalBill = document.querySelector("#inputFirst")
-const button = document.querySelectorAll(".btn")
-const custom = document.getElementById("custom")
-const sameThree = document.querySelectorAll(".sameThree")
-const numberOfPeople = document.querySelector("#inputPeople")
-const amount = document.querySelector(".Amount")
-const total = document.querySelector(".total")
-const reset = document.querySelector(".button")
-const add = document.getElementById("add")
-const sameTwo = document.querySelectorAll(".sameTwo")
+let totalBill = document.querySelector("#inputFirst")
+let button = document.querySelectorAll(".btn")
+let custom = document.getElementById("custom")
+let sameThree = document.querySelectorAll(".sameThree")
+let numberOfPeople = document.querySelector("#inputPeople")
+let amount = document.querySelector(".Amount")
+let total = document.querySelector(".total")
+let reset = document.querySelector(".realButton")
+let add = document.getElementById("add")
+let sameTwo = document.querySelectorAll(".sameTwo")
 
-console.log (custom)
+
 
 button.forEach(element => {
 
    element.addEventListener("click" , () =>{
+  
+   calculate(element);
+  
     
-   calculate(element)
+  
    btn();
    check();
+   
 })
 
 });
@@ -25,7 +29,7 @@ button.forEach(element => {
 sameThree.forEach(input =>{
     input.addEventListener("input" , () =>{
       
-       calculate(input)
+   calculate(custom);
        watch();
       
 })
@@ -49,33 +53,35 @@ sameTwo.forEach(checkTwo =>{
 
 })
 
-   totalBill.addEventListener("keypress" , ()=>{
-     
    
-   
-
-   custom.value = ""
-     
-   })
-
-   numberOfPeople.addEventListener("keypress" , () =>{
-         custom.value = ""
-   } )
 
 add.style.display = "none"
 
-function calculate(event) {
-   amount.textContent = ( event.value  / 100 * totalBill.value /numberOfPeople.value ).toFixed(2)
 
-   total.textContent = ( event.value / 100 * totalBill.value /numberOfPeople.value + totalBill.value / numberOfPeople.value ).toFixed(2)  
+function calculate(commit){
+   let  tipPercentage =  (commit.value / 100) * totalBill.value 
+ 
+   let tipPerPerson = tipPercentage / numberOfPeople.value
+
+   let totalPerPerson =  totalBill.value / numberOfPeople.value + tipPerPerson 
+ 
+   amount.textContent = ( tipPerPerson).toFixed(2)
+   total.textContent = (totalPerPerson).toFixed(2)
+    
+   console.log(amount.textContent)
+   console.log(total.textContent)
+     
 }
+
+
+
 
 
 function watch() {
    if (numberOfPeople.value === "0" ||  numberOfPeople.value === "" || custom.value === "" ){
       amount.textContent = "$0.00"
       total.textContent = "$0.00"
-   } else if (totalBill.value === "" || totalBill.value === "0") {}
+   } 
   
 
 }
