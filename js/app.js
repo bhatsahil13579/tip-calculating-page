@@ -16,8 +16,9 @@ button.forEach(element => {
    element.addEventListener("click", () => {
 
       calculate(element);
-      btn();
+     
       check();
+     
  })
 
 });
@@ -26,8 +27,7 @@ sameThree.forEach(input => {
    input.addEventListener("input", () => {
       
       calculate(custom);
-      watch();
-})
+     
 });
 
 sameTwo.forEach(checkTwo => {
@@ -61,25 +61,15 @@ function calculate(commit) {
    amount.textContent = (tipPerPerson).toFixed(2)
    total.textContent = (totalPerPerson).toFixed(2)
 
-}
 
-
-function watch() {
-   if (numberOfPeople.value === "0" || numberOfPeople.value === "" || custom.value === "") {
+   if (tipPerPerson == Infinity || totalPerPerson == Infinity ){
+         amount.textContent = "$0.00"
+         total.textContent = "$0.00"
+   }else  if(isNaN(tipPerPerson) || isNaN(totalPerPerson)){
       amount.textContent = "$0.00"
       total.textContent = "$0.00"
-   }
+   } 
 
-
-}
-
-
-function btn() {
-   if (numberOfPeople.value === "0" || numberOfPeople.value === "") {
-      amount.textContent = "$0.00"
-      total.textContent = "$0.00"
-
-   }
 }
 
 function check() {
@@ -90,9 +80,7 @@ function check() {
    }
 }
 
-
-
-
+})
 
 
 
