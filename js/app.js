@@ -13,98 +13,84 @@ let sameTwo = document.querySelectorAll(".sameTwo")
 
 button.forEach(element => {
 
-   element.addEventListener("click" , () =>{
-  
-   calculate(element);
-  
-    
-  
-   btn();
-   check();
-   
-})
+   element.addEventListener("click", () => {
 
-});
-
-sameThree.forEach(input =>{
-    input.addEventListener("input" , () =>{
-      
-   calculate(custom);
-       watch();
-      
-})
-});
-
-sameTwo.forEach(checkTwo =>{
-   checkTwo.addEventListener("input" , () =>{
+      calculate(element);
+      btn();
       check();
-   })});
-   
+ })
+
+});
+
+sameThree.forEach(input => {
+   input.addEventListener("input", () => {
+      
+      calculate(custom);
+      watch();
+})
+});
+
+sameTwo.forEach(checkTwo => {
+   checkTwo.addEventListener("input", () => {
+      check();
+   })
+
+});
 
 
-   reset.addEventListener("click" , ()=>{
+reset.addEventListener("click", () => {
    amount.textContent = "$0.00"
    total.textContent = "$0.00"
    add.style.display = "none"
-   sameThree.forEach(InputReset =>{
+   sameThree.forEach(InputReset => {
       InputReset.value = ""
-   }) 
-  
+   })
 
 })
-
-   
 
 add.style.display = "none"
 
 
-function calculate(commit){
-   let  tipPercentage =  (commit.value / 100) * totalBill.value 
- 
+function calculate(commit) {
+   let tipPercentage = (commit.value / 100) * totalBill.value
+
    let tipPerPerson = tipPercentage / numberOfPeople.value
 
-   let totalPerPerson =  totalBill.value / numberOfPeople.value + tipPerPerson 
- 
-   amount.textContent = ( tipPerPerson).toFixed(2)
+   let totalPerPerson = totalBill.value / numberOfPeople.value + tipPerPerson
+
+   amount.textContent = (tipPerPerson).toFixed(2)
    total.textContent = (totalPerPerson).toFixed(2)
-    
-   console.log(amount.textContent)
-   console.log(total.textContent)
-     
+
 }
-
-
-
 
 
 function watch() {
-   if (numberOfPeople.value === "0" ||  numberOfPeople.value === "" || custom.value === "" ){
+   if (numberOfPeople.value === "0" || numberOfPeople.value === "" || custom.value === "") {
       amount.textContent = "$0.00"
       total.textContent = "$0.00"
-   } 
-  
+   }
+
 
 }
 
 
-function btn(){
-   if (numberOfPeople.value === "0" ||  numberOfPeople.value === "" ){
+function btn() {
+   if (numberOfPeople.value === "0" || numberOfPeople.value === "") {
       amount.textContent = "$0.00"
       total.textContent = "$0.00"
-     
+
    }
 }
 
-
-function check(){
-   if (numberOfPeople.value === "" || numberOfPeople.value === "0"){
+function check() {
+   if (numberOfPeople.value === "" || numberOfPeople.value === "0") {
       add.style.display = "block"
-   }else{
+   } else {
       add.style.display = "none"
    }
 }
 
-   
+
 
 
 
