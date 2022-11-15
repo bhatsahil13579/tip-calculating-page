@@ -11,12 +11,13 @@ let sameTwo = document.querySelectorAll(".sameTwo")
 
 
 
+
+
 button.forEach(element => {
 
    element.addEventListener("click", () => {
 
       calculate(element);
-     
       check();
      
  })
@@ -50,27 +51,8 @@ reset.addEventListener("click", () => {
 
 add.style.display = "none"
 
+})
 
-function calculate(commit) {
-   let tipPercentage = (commit.value / 100) * totalBill.value
-
-   let tipPerPerson = tipPercentage / numberOfPeople.value
-
-   let totalPerPerson = totalBill.value / numberOfPeople.value + tipPerPerson
-
-   amount.textContent = (tipPerPerson).toFixed(2)
-   total.textContent = (totalPerPerson).toFixed(2)
-
-
-   if (tipPerPerson == Infinity || totalPerPerson == Infinity ){
-         amount.textContent = "$0.00"
-         total.textContent = "$0.00"
-   }else  if(isNaN(tipPerPerson) || isNaN(totalPerPerson)){
-      amount.textContent = "$0.00"
-      total.textContent = "$0.00"
-   } 
-
-}
 
 function check() {
    if (numberOfPeople.value === "" || numberOfPeople.value === "0") {
@@ -80,12 +62,22 @@ function check() {
    }
 }
 
-})
+function calculate(commit) {
+   let tipPercentage = (commit.value / 100) * totalBill.value
 
+   let tipPerPerson = tipPercentage / numberOfPeople.value
 
+   let totalPerPerson = totalBill.value / numberOfPeople.value + tipPerPerson
 
+   amount.textContent = (tipPerPerson).toFixed(2)
+   total.textContent = (totalPerPerson).toFixed(2) 
 
+   if (tipPerPerson == Infinity || totalPerPerson == Infinity ){
+      amount.textContent = "$0.00"
+      total.textContent = "$0.00"
+}else  if(isNaN(tipPerPerson) || isNaN(totalPerPerson)){
+   amount.textContent = "$0.00"
+   total.textContent = "$0.00"
 
-
-
+}}
 
