@@ -1,16 +1,13 @@
-let totalBill = document.querySelector("#inputFirst")
-let button = document.querySelectorAll(".btn")
-let custom = document.getElementById("custom")
-let sameThree = document.querySelectorAll(".sameThree")
-let numberOfPeople = document.querySelector("#inputPeople")
-let amount = document.querySelector(".Amount")
-let total = document.querySelector(".total")
-let reset = document.querySelector(".realButton")
-let add = document.getElementById("add")
-let sameTwo = document.querySelectorAll(".sameTwo")
-
-
-
+const totalBill = document.querySelector("#inputFirst")
+const button = document.querySelectorAll(".btn")
+const custom = document.getElementById("custom")
+const sameThree = document.querySelectorAll(".sameThree")
+const numberOfPeople = document.querySelector("#inputPeople")
+const amount = document.querySelector(".Amount")
+const total = document.querySelector(".total")
+const reset = document.querySelector(".realButton")
+const add = document.getElementById("add")
+const sameTwo = document.querySelectorAll(".sameTwo")
 
 
 button.forEach(element => {
@@ -20,6 +17,7 @@ button.forEach(element => {
       calculate(element);
       check();
      
+     
  })
 
 });
@@ -28,6 +26,9 @@ sameThree.forEach(input => {
    input.addEventListener("input", () => {
       
       calculate(custom);
+      
+     
+      
      
 });
 
@@ -63,11 +64,11 @@ function check() {
 }
 
 function calculate(commit) {
-   let tipPercentage = (commit.value / 100) * totalBill.value
+   const tipPercentage = (commit.value / 100) * totalBill.value
 
-   let tipPerPerson = tipPercentage / numberOfPeople.value
+   const tipPerPerson = tipPercentage / numberOfPeople.value
 
-   let totalPerPerson = totalBill.value / numberOfPeople.value + tipPerPerson
+   const totalPerPerson = totalBill.value / numberOfPeople.value + tipPerPerson
 
    amount.textContent = (tipPerPerson).toFixed(2)
    total.textContent = (totalPerPerson).toFixed(2) 
