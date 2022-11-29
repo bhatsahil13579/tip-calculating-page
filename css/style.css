@@ -79,7 +79,7 @@ h1 {
 }
 
 .inputHolder  .Add {
-    width: 90%;
+    
     text-align: end ;
     color: orange;
    
@@ -186,13 +186,22 @@ ul li input:focus{
     margin-left: 1rem;
    }
 
-.inputHolder > p{
+   .tag{
+    display: flex ;
+    margin-left: 0.2rem;
+    
+
+   }
+
+.tag > p{
+
+    width: 45%;
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 14px;
     color: var(--Grayish-cyan);
     text-align: start;
-   
+    
   
 }
 

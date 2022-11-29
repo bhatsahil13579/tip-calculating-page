@@ -38,9 +38,11 @@
           </ul>
 
           <div class="inputHolder">
+           <div class="tag">
           <p>Number of People</p>
            <p class="Add" id="add" > Can,t be zero</p> 
-          
+          </div> 
+
            <input  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" id="inputPeople" class="people sameThree sameTwo" type="text"
             placeholder="0">
           
