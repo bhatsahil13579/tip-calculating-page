@@ -66,12 +66,12 @@ function check() {
 function calculate(commit) {
    const tipPercentage = (commit.value / 100) * totalBill.value
 
-   const tipPerPerson = tipPercentage / numberOfPeople.value
+   const tipPerPerson =  tipPercentage / numberOfPeople.value
 
    const totalPerPerson = totalBill.value / numberOfPeople.value + tipPerPerson
 
-   amount.textContent = (tipPerPerson).toFixed(2)
-   total.textContent = (totalPerPerson).toFixed(2) 
+   amount.textContent =   `$${(tipPerPerson).toFixed(2)}` 
+   total.textContent =  `$${(totalPerPerson).toFixed(2)}`
 
    if (tipPerPerson == Infinity || totalPerPerson == Infinity ){
       amount.textContent = "$0.00"
